@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Espacial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Trivia Espacial</h1>
+            <p>¡Pon a prueba tus conocimientos sobre el espacio!</p>
+        </header>
+
+        <div id="game-container">
+            <div id="start-screen" class="screen active">
+                <h2>¡Bienvenido al Trivia Espacial!</h2>
+                <p>Responde 10 preguntas sobre el espacio y descubre qué tan experto eres.</p>
+                <button id="start-btn" class="btn">¡Comenzar!</button>
+            </div>
+
+            <div id="question-screen" class="screen">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="question-info">
+                    <span id="question-number">Pregunta 1</span>
+                    <span id="score">Puntuación: 0</span>
+                </div>
+                
+                <div class="question-container">
+                    <h3 id="question-text">¿Cuál es el planeta más cercano al Sol?</h3>
+                    <div class="options">
+                        <button class="option-btn" data-correct="false">Tierra</button>
+                        <button class="option-btn" data-correct="true">Mercurio</button>
+                        <button class="option-btn" data-correct="false">Venus</button>
+                        <button class="option-btn" data-correct="false">Marte</button>
+                    </div>
+                </div>
+
+                <div class="feedback" id="feedback"></div>
+            </div>
+
+            <div id="result-screen" class="screen">
+                <h2>¡Juego Terminado!</h2>
+                <div class="final-score">
+                    <h3>Tu puntuación final:</h3>
+                    <div class="score-display">
+                        <span id="final-score">0</span>
+                        <span>/ 10</span>
+                    </div>
+                </div>
+                <div class="score-message" id="score-message"></div>
+                <button id="restart-btn" class="btn">Jugar de nuevo</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
